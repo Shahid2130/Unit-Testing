@@ -1,0 +1,39 @@
+
+<div class='container-fluid'>
+  <div class="row">
+<div class="col-md-6 offset-md-3">
+  <input  class='form-control m-5' placeholder="Enter text to filter" [(ngModel)]='searchvalue'/>
+</div>
+    </div>
+  </div>
+  
+  <div class='container-fluid'>
+    <div class="row">
+        <div  class="card col-md-4 offset-md-4">
+          <div class="card-body">
+            <button id='directiveBtn' class='btn btn-primary mx-2' backGroundColorChange (click)='getData()'>Get</button>
+            <button class='btn btn-success mx-2' (click)='add()'>Add</button>
+            <button class='btn btn-danger' (click)='delete()'>Delete</button>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+<div class='container-fluid'>
+  <div class="row">
+      <div  class="card col-md-3 offset-md-1 my-3"  *ngFor="let d of testData">
+        <div class="card-body">
+          <h5 class="card-title">ID : {{d.id}}</h5>
+          <h6 class="card-subtitle mb-2 text-white">Name : {{d.first_name+' '+d.last_name|Upper}}</h6>
+          <p class="card-text"><strong>Email :</strong> {{d.email}}</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
